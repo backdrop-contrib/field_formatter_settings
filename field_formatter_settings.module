@@ -13,6 +13,8 @@ function field_formatter_settings_form_field_ui_display_overview_form_alter(&$fo
   $field_types = field_info_field_types();
   $extra_fields = field_info_extra_fields($entity_type, $bundle, 'display');
 
+  $table = &$form['fields'];
+
   // Field rows.
   foreach ($instances as $name => $instance) {
     $field = field_info_field($instance['field_name']);
