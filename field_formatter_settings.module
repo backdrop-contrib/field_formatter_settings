@@ -34,7 +34,7 @@ function field_formatter_settings_get_instance_display_settings($entity_type, $f
   $defaults = $info['display']['default']['settings'];
 
   if (isset($info['display'][$view_mode]['settings'])) {
-    return $field_display[$view_mode]['settings'] + $defaults;
+    return $info['display'][$view_mode]['settings'] + $defaults;
   }
   else {
     return $defaults;
