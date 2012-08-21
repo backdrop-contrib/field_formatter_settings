@@ -175,3 +175,26 @@ function field_formatter_settings_form_field_ui_display_overview_form_alter(&$fo
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Support altering formatter settings for field handlers in Views. Unlike the
+ * Field UI page, this does not require the settings summary hook to be
+ * invoked to work.
+ */
+function field_formatter_settings_form_views_ui_config_item_form_alter(&$form, &$form_state) {
+  $handler = $form_state['handler'];
+  if ($handler instanceof views_handler_field_field) {
+    $context = array(
+      'module' => $handler->field_info['module'],
+      'formatter' => $handler->field_info['type'],
+      'field' => field_info_field($handler->options['field']),
+      'instance' => $handler->instance,
+      'view_mode' => '_custom', // Same view mode as field_view_field().
+      'form' => $form,
+      'form_state' => $form_state,
+    );
+    drupal_alter('field_formatter_settings_form', $form['options']['settings'], $context);
+  }
+}
