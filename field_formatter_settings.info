@@ -1,5 +1,4 @@
 name = Field formatter settings API
 description = Provides missing alter hooks for field formatter settings and summaries
 core = 7.x
-dependencies[] = field_ui
 files[] = field_formatter_settings.module
