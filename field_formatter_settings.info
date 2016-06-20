@@ -1,5 +1,6 @@
 name = Field formatter settings API
 description = Provides missing alter hooks for field formatter settings and summaries
 backdrop = 1.x
+type = module
 enhances[] = field_ui
 enhances[] = views_ui
