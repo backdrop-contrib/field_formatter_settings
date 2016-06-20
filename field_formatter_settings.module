@@ -108,7 +108,7 @@ function field_formatter_settings_form_field_ui_display_overview_form_alter(&$fo
         'form' => $form,
         'form_state' => $form_state,
       );
-      drupal_alter('field_formatter_settings_form', $settings_form, $context);
+      backdrop_alter('field_formatter_settings_form', $settings_form, $context);
 
       if ($settings_form) {
         $table[$name]['format']['#cell_attributes'] = array('colspan' => 3);
@@ -152,7 +152,7 @@ function field_formatter_settings_form_field_ui_display_overview_form_alter(&$fo
         'instance' => $instance,
         'view_mode' => $view_mode,
       );
-      drupal_alter('field_formatter_settings_summary', $summary, $context);
+      backdrop_alter('field_formatter_settings_summary', $summary, $context);
 
       $table[$name]['settings_summary'] = array();
       $table[$name]['settings_edit'] = array();
@@ -197,6 +197,6 @@ function field_formatter_settings_form_views_ui_config_item_form_alter(&$form, &
       'form' => $form,
       'form_state' => $form_state,
     );
-    drupal_alter('field_formatter_settings_form', $form['options']['settings'], $context);
+    backdrop_alter('field_formatter_settings_form', $form['options']['settings'], $context);
   }
 }
