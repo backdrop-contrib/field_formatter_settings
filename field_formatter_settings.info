@@ -1,4 +1,4 @@
-name = Field formatter settings API
+name = Field Formatter Settings API
 description = Provides missing alter hooks for field formatter settings and summaries
 backdrop = 1.x
 type = module
