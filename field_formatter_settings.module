@@ -46,7 +46,7 @@ function field_formatter_settings_get_instance_display_settings($entity_type, $f
  *
  * @see field_ui_display_overview_form()
  */
-function field_formatter_settings_form_field_ui_display_overview_form_alter(&$form, &$form_state) {
+function field_formatter_settings_form_field_ui_display_form_alter(&$form, &$form_state) {
   $entity_type = $form['#entity_type'];
   $bundle = $form['#bundle'];
   $view_mode = $form['#view_mode'];
