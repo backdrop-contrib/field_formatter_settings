@@ -165,9 +165,9 @@ function field_formatter_settings_form_field_ui_display_form_alter(&$form, &$for
           '#type' => 'image_button',
           '#name' => $name . '_formatter_settings_edit',
           '#src' => 'misc/configure.png',
-          '#attributes' => array('class' => array('field-formatter-settings-edit'), 'alt' => t('Edit')),
+          '#attributes' => array('class' => array('field-formatter-settings-edit'), 'alt' => t('Configure')),
           '#op' => 'edit',
-          // Do not check errors for the 'Edit' button, but make sure we get
+          // Do not check errors for the 'Configure' button, but make sure we get
           // the value of the 'formatter type' select.
           '#limit_validation_errors' => array(array('fields', $name, 'type')),
           '#prefix' => '<div class="field-formatter-settings-edit-wrapper">',
