@@ -162,7 +162,7 @@ function field_formatter_settings_form_field_ui_display_form_alter(&$form, &$for
           '#cell_attributes' => array('class' => array('field-formatter-summary-cell')),
         );
         $table[$name]['settings_edit'] = $base_button + array(
-          '#type' => 'button',
+          '#type' => 'submit',
           '#name' => $name . '_formatter_settings_edit',
           '#value' => 'Configure',
           '#attributes' => array('class' => array('field-formatter-settings-edit', 'button-secondary')),
