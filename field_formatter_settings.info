@@ -4,3 +4,5 @@ backdrop = 1.x
 type = module
 enhances[] = field_ui
 enhances[] = views_ui
+
+dependencies[] = system (<1.13)

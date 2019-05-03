@@ -1,4 +1,7 @@
-# Field Formatter Settings
+# Field Formatter Settings (for Backdrop < 1.13)
+
+**Status: This project is no longer needed as of Backdrop 1.13 since the 
+functionality has been added in core.**
 
 The Field API in Backdrop core lacks the ability for other modules to easily 
 alter field formatter settings forms and the formatter summaries. This module 
